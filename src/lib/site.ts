@@ -7,8 +7,8 @@ export const site = {
   tagline: "Affordable. Trustworthy. Reliable.",
   description:
     "Australian-owned commercial cleaning across Western Sydney. Offices, strata, medical centres, schools, childcare and gyms — with a free quote and a tailored cleaning program.",
-  phone: "0412 889 770",
-  phoneHref: "tel:+61412889770",
+  phone: "0426 703 030",
+  phoneHref: "tel:+61426703030",
   email: "hello@westernsydneycleaning.com.au",
   emailHref: "mailto:hello@westernsydneycleaning.com.au",
   hours: {
