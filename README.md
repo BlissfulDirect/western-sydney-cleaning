@@ -81,3 +81,13 @@ To connect **westernsydneycleaning.com.au** later (~$15–$30/year — not requi
 ## Stack
 
 Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
+
+## Dubai sister site
+
+The Dubai brochure is a second Next.js app in `dubai-office-cleaning/` (brand: **Dubai Office Cleaning**). It is not a licensed UAE company yet — it is the website and quote form only.
+
+```bash
+npm run dev:dubai
+```
+
+Open [http://localhost:43157](http://localhost:43157). Deploy it as a separate Vercel project with **Root Directory** `dubai-office-cleaning`. Details: `dubai-office-cleaning/README.md`.

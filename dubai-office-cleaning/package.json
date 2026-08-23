@@ -1,12 +1,10 @@
 {
-  "name": "western-sydney-cleaning",
+  "name": "dubai-office-cleaning",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:dubai": "npm run dev --prefix dubai-office-cleaning",
+    "dev": "next dev --port 43157",
     "build": "next build",
-    "build:dubai": "npm run build --prefix dubai-office-cleaning",
     "start": "next start",
     "lint": "eslint"
   },

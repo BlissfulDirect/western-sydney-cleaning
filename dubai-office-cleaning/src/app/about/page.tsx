@@ -1,0 +1,119 @@
+import { CheckCircle2 } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+
+import { ContactQuoteSection } from "@/components/contact-quote-section";
+import { FreeCleanBanner } from "@/components/free-clean-banner";
+import { PageHero } from "@/components/page-hero";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Dubai Office Cleaning is a new office-cleaning company for Dubai. After-hours weekly cleans for small and medium offices in Business Bay, DIFC, Marina and nearby districts.",
+};
+
+const values = [
+  {
+    title: "Clear communication",
+    body: "A named supervisor, written scopes and a phone number that is actually answered. You always know who is in your building and what they are there to do.",
+  },
+  {
+    title: "Only the best quality",
+    body: "Commercial cloths and products for offices — kitchens, bathrooms and floors — used the same way each visit.",
+  },
+  {
+    title: "Local and accountable",
+    body: "We are building this company for Dubai offices. If something is missed, we come back. Long-term relationships matter more than a cheap first invoice.",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      <PageHero
+        title="About Us"
+        subtitle="A new Dubai office-cleaning company. We start with weekly after-hours work for small and medium workplaces — not every building type on day one."
+      />
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+          <div>
+            <p className="font-script text-3xl text-[#1ea36f]">Who we are</p>
+            <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
+              Built for small offices first
+            </h2>
+            <p className="mt-5 leading-relaxed text-neutral-700">
+              Dubai Office Cleaning is a new business for Dubai offices. We
+              set it up to do one thing well: after-hours cleaning for
+              workplaces we can walk, quote on paper, and return to every week.
+              We will not start a site until the company is licensed and insured.
+            </p>
+            <p className="mt-4 leading-relaxed text-neutral-700">
+              We are not taking on hospitals, nursery centres or high-rise
+              building common areas as the first jobs. Those need extra checks and experience.
+              If that is your site, ask — we will be straight with you.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Trade licence and insurance in place before the first job",
+                "After-hours weekly and every two weeks office cleans",
+                "Written checklist after a free site walk",
+                "One named contact — the number on this website",
+              ].map((item) => (
+                <li key={item} className="flex gap-3 text-neutral-700">
+                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[#1ea36f]" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
+            <Image
+              src="/images/team.jpg"
+              alt="Dubai Office Cleaning team discussing a site program"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#f3faf6] py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-center font-heading text-3xl font-extrabold text-[#0f6b4c]">
+            We take pride in customer satisfaction
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-neutral-600">
+            We work closely with commercial clients so they are genuinely happy
+            with the result — not just invoiced for a walk-through.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {values.map((value) => (
+              <article
+                key={value.title}
+                className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#d5eee3]"
+              >
+                <h3 className="font-heading text-xl font-bold text-[#0f6b4c]">
+                  {value.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                  {value.body}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex h-12 items-center rounded-full bg-[#0f6b4c] px-7 font-bold text-white hover:bg-[#0b543c]"
+            >
+              Request a free quote
+            </Link>
+          </div>
+        </div>
+      </section>
+      <ContactQuoteSection />
+      <FreeCleanBanner />
+    </>
+  );
+}
