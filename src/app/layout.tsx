@@ -23,12 +23,12 @@ const satisfy = Satisfy({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Commercial Cleaning Western Sydney`,
+    default: `${site.name} | Office Cleaning Western Sydney`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
   openGraph: {
-    title: `${site.name} | Commercial Cleaning Western Sydney`,
+    title: `${site.name} | Office Cleaning Western Sydney`,
     description: site.description,
     url: site.url,
     siteName: site.name,

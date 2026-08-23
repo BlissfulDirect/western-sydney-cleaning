@@ -9,7 +9,7 @@ import { services } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Commercial, office, industrial, strata, medical, school, childcare and gym cleaning across Western Sydney.",
+    "After-hours office cleaning across Western Sydney. Weekly and fortnightly programs for small and medium offices.",
 };
 
 export default function ServicesPage() {
@@ -17,17 +17,17 @@ export default function ServicesPage() {
     <>
       <PageHero
         title="SERVICES"
-        subtitle="100% Australian-owned cleaning company specialising in professional cleaning for businesses across Western Sydney."
+        subtitle="Office cleaning is the work we take first. Weekly or fortnightly after hours, with a written checklist after we walk your site."
       />
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="text-center font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
-            Our Cleaning Services
+            Office cleaning first
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-neutral-600">
-            Using our professional experience, we work with you to establish a
-            cleaning program that will be best suited to you and your
-            requirements.
+            Start here if you have a small or medium office. Other commercial
+            work is listed below — ask us if it is a fit, and we will say so
+            straight.
           </p>
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {services.map((service) => (

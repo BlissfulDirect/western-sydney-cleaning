@@ -6,7 +6,7 @@ export const site = {
   url: "https://westernsydneycleaning.com.au",
   tagline: "Affordable. Trustworthy. Reliable.",
   description:
-    "Australian-owned commercial cleaning across Western Sydney. Offices, strata, medical centres, schools, childcare and gyms — with a free quote and a tailored cleaning program.",
+    "After-hours office cleaning across Western Sydney. Weekly and fortnightly programs for small and medium offices — with a free site walk and a written quote.",
   phone: "0426 703 030",
   phoneHref: "tel:+61426703030",
   email: "admin@westernsydneycleaning.com.au",
@@ -22,11 +22,10 @@ export const site = {
 } as const;
 
 export const serviceOptions = [
-  "Commercial, Office & Industrial Cleaning",
-  "Medical & Dental Centres Cleaning",
-  "Schools, PreSchools & Childcare Centres Cleaning",
-  "Strata Cleaning",
-  "Gym Cleaning",
+  "Weekly office cleaning",
+  "Fortnightly office cleaning",
+  "One-off office clean",
+  "Small warehouse / industrial unit",
   "Other",
 ] as const;
 

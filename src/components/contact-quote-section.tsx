@@ -16,9 +16,8 @@ export function ContactQuoteSection({
             Contact Us For A Quote
           </h2>
           <p className="mt-3 text-neutral-600">
-            Contact us today to schedule your complimentary cleaning quotation.
-            We will inspect the site, confirm the scope, and send a clear
-            written price.
+            Contact us today to book a free walk-through of your office. We
+            will confirm the rooms, hours and a clear written price.
           </p>
           <div className="mt-6">
             <QuoteForm defaultService={defaultService} />
@@ -32,8 +31,8 @@ export function ContactQuoteSection({
             {site.shortName}
           </h2>
           <p className="mt-4 max-w-md text-neutral-600">
-            We are here to answer questions and put together a cleaning program
-            that matches your building, your hours and your budget.
+            We answer questions about weekly office cleans — suburb, size,
+            after-hours access — and put a simple program on paper.
           </p>
           <p className="mt-4 text-neutral-600">
             Reach us by phone, email, or the form — we typically respond the

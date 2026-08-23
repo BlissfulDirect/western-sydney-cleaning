@@ -22,7 +22,7 @@ export const services: Service[] = [
     excerpt:
       "A well-cleaned office emphasises the professionalism of your company and creates a happier, more productive workplace.",
     intro:
-      "Western Sydney Cleaning covers a wide range of office, warehouse and industrial tasks. Whether you need a handful of duties or a full daily program, we build a schedule that fits how your site actually operates.",
+      "This is our core work: after-hours cleaning for small and medium offices. We walk the site with you, write a simple checklist, then come back weekly or fortnightly so desks, kitchens, bathrooms and floors stay consistent.",
     image: "/images/commercial.jpg",
     imageAlt: "Bright, well-kept commercial office interior",
     tasks: [

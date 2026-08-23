@@ -1,33 +1,27 @@
-import { Star } from "lucide-react";
-
 import { testimonials } from "@/lib/testimonials";
 
 export function Testimonials() {
   return (
     <section className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <p className="text-sm font-bold tracking-[0.18em] text-[#1ea36f] uppercase">
-              5 Star Review Ratings
-            </p>
-            <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
-              Our Happy Clients
-            </h2>
-          </div>
-        </div>
+        <p className="text-sm font-bold tracking-[0.18em] text-[#1ea36f] uppercase">
+          Who this is for
+        </p>
+        <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
+          Small and medium offices
+        </h2>
+        <p className="mt-4 max-w-2xl text-neutral-600">
+          We are building this business on regular office work — not fake
+          five-star reviews. If your workplace sounds like this, we are the
+          right call.
+        </p>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {testimonials.map((item) => (
             <figure
               key={item.name}
               className="rounded-3xl border border-[#d5eee3] bg-[#f6fbf8] p-6"
             >
-              <div className="flex gap-1 text-[#f5b400]">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <Star key={index} className="size-4 fill-current" />
-                ))}
-              </div>
-              <blockquote className="mt-4 text-[15px] leading-relaxed text-neutral-700">
+              <blockquote className="text-[15px] leading-relaxed text-neutral-700">
                 “{item.quote}”
               </blockquote>
               <figcaption className="mt-5">

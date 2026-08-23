@@ -10,7 +10,7 @@ import { PageHero } from "@/components/page-hero";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Meet Western Sydney Cleaning — an Australian-owned commercial cleaning company serving offices, strata, medical centres, schools and gyms from Penrith to Parramatta.",
+    "Western Sydney Cleaning is a new local office-cleaning company. After-hours weekly cleans for small and medium offices from Penrith to Parramatta.",
 };
 
 const values = [
@@ -20,7 +20,7 @@ const values = [
   },
   {
     title: "Only the best quality",
-    body: "Commercial equipment, colour-coded cloths and products matched to the site — offices, clinics, centres and gyms are not cleaned the same way.",
+    body: "Commercial cloths and products for offices — kitchens, bathrooms and floors — used the same way each visit.",
   },
   {
     title: "Local and accountable",
@@ -33,32 +33,31 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Us"
-        subtitle="Australian-owned commercial cleaners for Western Sydney businesses that want a reliable program, not a revolving door of casuals."
+        subtitle="A new Western Sydney office-cleaning company. We start with weekly after-hours work for small and medium workplaces — not every building type on day one."
       />
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
           <div>
             <p className="font-script text-3xl text-[#1ea36f]">Who we are</p>
             <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
-              A Western Sydney team built for commercial sites
+              Built for small offices first
             </h2>
             <p className="mt-5 leading-relaxed text-neutral-700">
-              Western Sydney Cleaning was set up to give local businesses a
-              cleaner they can actually reach — with a documented scope, insured
-              staff and a program that fits real operating hours.
+              Western Sydney Cleaning is a new local business. We set it up to
+              do one thing well: after-hours cleaning for offices we can walk,
+              quote on paper, and return to every week.
             </p>
             <p className="mt-4 leading-relaxed text-neutral-700">
-              We specialise in offices, industrial units, strata schemes, medical
-              and dental centres, schools, childcare and gyms. Every site gets a
-              walkthrough, a written quotation and a roster that does not change
-              every week.
+              We are not taking on hospitals, childcare centres or high-rise
+              strata as the first jobs. Those need extra checks and experience.
+              If that is your site, ask — we will be straight with you.
             </p>
             <ul className="mt-6 space-y-3">
               {[
-                "Public liability insured",
-                "Police-checked, uniformed cleaners",
-                "Working with Children Checks where the site requires it",
-                "After-hours, overnight and weekend programs",
+                "Public liability insurance in place before the first job",
+                "After-hours weekly and fortnightly office cleans",
+                "Written checklist after a free site walk",
+                "One named contact — the number on this website",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-neutral-700">
                   <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[#1ea36f]" />

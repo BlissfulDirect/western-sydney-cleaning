@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Western Sydney Cleaning for a free commercial cleaning quote. Phone, email or send the form — we service all of Western Sydney.",
+    "Book a free office walk-through in Western Sydney. Call 0426 703 030 or email admin@westernsydneycleaning.com.au.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Contact"
-        subtitle="Get in touch for professional, reliable, tailored cleaning solutions."
+        subtitle="Tell us the suburb and roughly how big the office is. We will walk the site and send a written quote."
       />
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -27,7 +27,8 @@ export default function ContactPage() {
               {site.shortName}
             </h2>
             <p className="mt-4 text-neutral-600">
-              Our team is ready to answer any questions you may have.
+              Best for weekly or fortnightly after-hours office cleaning. Call
+              or use the form — we typically reply the same business day.
             </p>
             <ul className="mt-8 space-y-5">
               <li className="flex gap-4">
@@ -102,7 +103,7 @@ export default function ContactPage() {
               Fill in the details below and we will get back to you shortly.
             </p>
             <div className="mt-6">
-              <QuoteForm />
+              <QuoteForm defaultService="Weekly office cleaning" />
             </div>
           </div>
         </div>

@@ -14,9 +14,9 @@ export function FreeCleanBanner() {
             FREE INITIAL CLEAN
           </h2>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-white/85">
-            Sign up for a regular commercial program and we will complete your
-            first scheduled clean at no charge, so you can see the standard
-            before you commit long term.
+            Sign up for a regular weekly or fortnightly office clean and we
+            will do the first scheduled visit at no charge, so you can see the
+            standard before you stay on.
           </p>
           <p className="mt-4 text-xs text-white/70">
             Free initial clean is subject to inspection and must comply with our
