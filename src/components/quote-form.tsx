@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { serviceOptions } from "@/lib/site";
+import { serviceOptions, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type QuoteFormProps = {
@@ -43,7 +43,10 @@ export function QuoteForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      const payload = (await response.json()) as { error?: string };
+      const payload = (await response.json()) as {
+        error?: string;
+        emailVia?: string;
+      };
 
       if (!response.ok) {
         setStatus("error");
@@ -51,11 +54,22 @@ export function QuoteForm({
         return;
       }
 
+      if (payload.emailVia === "client") {
+        const emailed = await sendViaFormSubmit(data);
+        if (!emailed) {
+          setStatus("error");
+          setMessage(
+            `The form could not send just now. Please call ${site.phone}.`,
+          );
+          return;
+        }
+      }
+
       setStatus("success");
       form.reset();
     } catch {
       setStatus("error");
-      setMessage("Something went wrong. Please call us or try again shortly.");
+      setMessage(`Something went wrong. Please call ${site.phone}.`);
     }
   }
 
@@ -73,8 +87,9 @@ export function QuoteForm({
       >
         <p className="font-heading text-xl font-bold">Quote request received</p>
         <p className={cn("mt-2 text-sm", dark ? "text-white/80" : "text-neutral-600")}>
-          Thank you. A team member will call you to arrange a free on-site inspection
-          and a written scope of works.
+          Thank you. We will call you on the number you gave to arrange a free
+          on-site inspection and a written quote. If you need us sooner, call{" "}
+          {site.phone}.
         </p>
         <Button
           type="button"
@@ -96,6 +111,12 @@ export function QuoteForm({
 
   return (
     <form id={id} onSubmit={onSubmit} className="grid gap-3">
+      <div className="hidden" aria-hidden="true">
+        <label>
+          Company
+          <input type="text" name="company" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
       <Field label="Your name *" dark={dark}>
         <Input required name="name" autoComplete="name" className={fieldClass} />
       </Field>
@@ -166,6 +187,42 @@ export function QuoteForm({
       </Button>
     </form>
   );
+}
+
+async function sendViaFormSubmit(data: Record<string, FormDataEntryValue>) {
+  const service = String(data.service ?? "");
+  const suburb = String(data.suburb ?? "");
+  const subject = `Quote request: ${service}${suburb ? ` — ${suburb}` : ""}`;
+
+  try {
+    const response = await fetch(
+      `https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: String(data.name ?? ""),
+          email: String(data.email ?? ""),
+          _replyto: String(data.email ?? ""),
+          phone: String(data.phone ?? ""),
+          service,
+          suburb: suburb || "(not given)",
+          message: String(data.message ?? "") || "(none)",
+          _subject: subject,
+          _template: "table",
+          _captcha: "false",
+        }),
+      },
+    );
+    if (!response.ok) return false;
+    const payload = (await response.json()) as { success?: boolean | string };
+    return payload.success === true || payload.success === "true";
+  } catch {
+    return false;
+  }
 }
 
 function Field({

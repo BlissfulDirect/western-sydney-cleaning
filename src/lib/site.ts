@@ -1,7 +1,7 @@
 export const site = {
   name: "Western Sydney Cleaning",
   shortName: "Western Sydney Cleaning",
-  legalName: "Western Sydney Cleaning Pty Ltd",
+  legalName: "Western Sydney Cleaning",
   domain: "westernsydneycleaning.com.au",
   url: "https://westernsydneycleaning.com.au",
   tagline: "Affordable. Trustworthy. Reliable.",

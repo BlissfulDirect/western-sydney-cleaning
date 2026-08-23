@@ -1,8 +1,57 @@
 # Western Sydney Cleaning
 
-Commercial cleaning website for **Western Sydney Cleaning** (`westernsydneycleaning.com.au`).
+Commercial cleaning website for **Western Sydney Cleaning**.
 
 Call **0426 703 030** or email **admin@westernsydneycleaning.com.au**.
+
+Live site: [western-sydney-cleaning.vercel.app](https://western-sydney-cleaning.vercel.app)
+
+## Start for the least money
+
+If the goal is **first paid work**, stay in Australia. Do not open Dubai yet. A Dubai mainland company plus visas is roughly **AUD 15,000–30,000** before wages. Western Sydney can start for about **AUD 1,000–2,000**.
+
+### Spend this, in this order
+
+| Step | What | Typical cost |
+| --- | --- | --- |
+| 1 | [ABN](https://abr.gov.au) as a **sole trader** | Free |
+| 2 | ASIC business name *Western Sydney Cleaning* | ~$42 / 1 year |
+| 3 | Everyday bank account in that name | Free if you already bank in Australia |
+| 4 | **$20 million public liability** (cleaning / commercial contractors) | ~$700–$1,500 / year |
+| 5 | Starter kit: vacuum, mop, bucket, microfibre, bin bags, gloves, disinfectant, glass cleaner, spray bottles | ~$250–$400 |
+| 6 | This website on Vercel | Free |
+
+**Do not buy yet:** a Pty Ltd company, a van, employees, workers compensation, bulk uniforms, Certificate III, Google Ads, or a Dubai licence. Use your car and a caddy. Add workers comp only when you employ someone (including a cousin).
+
+Put the ABN on invoices. Register for GST only if turnover is heading toward $75,000.
+
+### Insurance is the one bill you cannot skip
+
+A small office will often ask for a certificate of currency before you get keys. Quote **$20 million public liability**. Use a broker or a cleaning specialist (BizCover, Coverforce, and similar). Do not start a site without it.
+
+### First dollar of revenue
+
+1. Confirm FormSubmit (see below) so quote emails actually arrive.
+2. Walk **five small offices** near you (Penrith, St Marys, Mount Druitt, Parramatta). Ask reception for the office manager. Leave the phone number and the live website.
+3. Quote **after-hours weekly** first. Walk the kitchens, bathrooms, floors and desks. Price your time at about **$45–$65/hour** as owner-operator. Do not go so low that you cannot restock supplies.
+4. Invoice with Wave, Invoice2go, or a simple PDF. Payment terms: 7 days. Weekly work is the goal — one-off cleans are extra cash, not the business.
+
+A cousin as supervisor is for later, when there is a second site and you can pay wages plus workers compensation. It is not a day-one cost.
+
+### Dubai later
+
+Same idea, separate company. Do not use this Australian ABN in the UAE. Do not clean in Dubai on a visit visa. Revisit Dubai only after Australia is paying.
+
+## Quote emails
+
+Quote forms post to `/api/quote` and email **admin@westernsydneycleaning.com.au** through [FormSubmit](https://formsubmit.co) (free, no account).
+
+**The first live submission sends an activation email.** Open that inbox, click the confirm link, then send a test quote from the contact page. Until you click it, new enquiries will not arrive.
+
+For a more reliable inbox later, create a free [Web3Forms](https://web3forms.com) key and add it in Vercel → Project → Settings → Environment Variables:
+
+- `WEB3FORMS_ACCESS_KEY`
+- `QUOTE_TO_EMAIL` (optional; defaults to admin@westernsydneycleaning.com.au)
 
 ## Run locally
 
@@ -13,72 +62,21 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Publish on the web (recommended: Vercel)
+## Publish on the web (Vercel)
 
-This is a Next.js site. The simplest way to put it on the internet is [Vercel](https://vercel.com) (the company behind Next.js). It is free for a business site like this.
+The live project is already on Vercel, connected to the GitHub repo [BlissfulDirect/western-sydney-cleaning](https://github.com/BlissfulDirect/western-sydney-cleaning). Pushes to `main` rebuild the site.
 
-### 1. Put the code on GitHub
+To connect **westernsydneycleaning.com.au** later (~$15–$30/year — not required to take the first job):
 
-1. Create a free account at [github.com](https://github.com).
-2. Click **New repository**, name it `western-sydney-cleaning`, leave it empty, and create it.
-3. In a terminal, from this project folder:
-
-```bash
-git remote add github https://github.com/YOUR-USERNAME/western-sydney-cleaning.git
-git branch -M main
-git push -u github main
-```
-
-(If this project already has a Git remote, you can import that repository into Vercel instead.)
-
-### 2. Deploy on Vercel
-
-1. Go to [vercel.com/signup](https://vercel.com/signup) and sign in with GitHub.
-2. Click **Add New… → Project**.
-3. Import the `western-sydney-cleaning` repository.
-4. Leave the defaults (Framework: Next.js, Build command: `next build`, Output: default).
-5. Click **Deploy**.
-
-After a minute you will get a live URL such as:
-
-`https://western-sydney-cleaning.vercel.app`
-
-Share that link immediately. It is a real website.
-
-### 3. Connect westernsydneycleaning.com.au
-
-Buy the domain from a registrar (for example [Crazy Domains](https://www.crazydomains.com.au), [Google Domains / Squarespace](https://domains.squarespace.com), or [Cloudflare](https://www.cloudflare.com/products/registrar/)).
-
-Then in Vercel:
-
-1. Open the project → **Settings → Domains**.
-2. Add `westernsydneycleaning.com.au` and `www.westernsydneycleaning.com.au`.
-3. Vercel will show the DNS records to add at your registrar, usually:
+1. Buy the domain (Crazy Domains, Cloudflare, or similar).
+2. Vercel → Project → **Settings → Domains**.
+3. Add `westernsydneycleaning.com.au` and `www.westernsydneycleaning.com.au`.
+4. Add the DNS records Vercel shows, usually:
 
 | Type | Name | Value |
 | --- | --- | --- |
 | A | `@` | `76.76.21.21` |
 | CNAME | `www` | `cname.vercel-dns.com` |
-
-DNS can take up to 24 hours. HTTPS (the padlock) is turned on automatically.
-
-### 4. Before customers use it
-
-In `src/lib/site.ts` confirm:
-
-- Phone: **0426 703 030** (already set)
-- Email: **admin@westernsydneycleaning.com.au** (already set)
-- ABN, once you have one
-- Operating hours
-
-Quote forms currently **validate and confirm on the site**. They do not yet email you. To receive enquiries:
-
-- Create a free [Formspree](https://formspree.io) or [Web3Forms](https://web3forms.com) inbox and point `/api/quote` at it, or
-- Check Vercel **Project → Logs** until email is connected.
-
-## Other hosts
-
-You can also run `npm run build` then `npm start` on any Node.js host (Railway, Render, a VPS). You need Node 20+ and a process that runs `next start` on port 3000 (or the port the host provides).
 
 ## Stack
 

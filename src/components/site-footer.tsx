@@ -15,8 +15,8 @@ export function SiteFooter() {
             <Logo compact />
           </div>
           <p className="mt-5 text-sm leading-relaxed text-white/80">
-            Australian-owned commercial cleaning for offices, strata, medical
-            centres, schools, childcare and gyms across Western Sydney.
+            Australian-owned after-hours office cleaning across Western Sydney.
+            Small and medium workplaces first — weekly and fortnightly programs.
           </p>
         </div>
         <div>

@@ -1,6 +1,15 @@
 import { NextResponse } from "next/server";
 
-import { serviceOptions } from "@/lib/site";
+import { serviceOptions, site } from "@/lib/site";
+
+type QuoteFields = {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  suburb: string;
+  message: string;
+};
 
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -10,30 +19,82 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 
-  const name = String(body.name ?? "").trim();
-  const email = String(body.email ?? "").trim();
-  const phone = String(body.phone ?? "").trim();
-  const service = String(body.service ?? "").trim();
-  const suburb = String(body.suburb ?? "").trim();
-  const message = String(body.message ?? "").trim();
+  if (String(body.company ?? "").trim()) {
+    return NextResponse.json({ ok: true, emailVia: "none" });
+  }
 
-  if (name.length < 2) {
+  const fields: QuoteFields = {
+    name: String(body.name ?? "").trim(),
+    email: String(body.email ?? "").trim(),
+    phone: String(body.phone ?? "").trim(),
+    service: String(body.service ?? "").trim(),
+    suburb: String(body.suburb ?? "").trim(),
+    message: String(body.message ?? "").trim(),
+  };
+
+  if (fields.name.length < 2) {
     return NextResponse.json({ error: "Please enter your name." }, { status: 400 });
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
     return NextResponse.json({ error: "Please enter a valid email." }, { status: 400 });
   }
-  if (phone.replace(/\s/g, "").length < 8) {
+  if (fields.phone.replace(/\s/g, "").length < 8) {
     return NextResponse.json({ error: "Please enter a valid phone number." }, { status: 400 });
   }
-  if (!serviceOptions.includes(service as (typeof serviceOptions)[number]) && service !== "") {
-    return NextResponse.json({ error: "Please select a service." }, { status: 400 });
-  }
-  if (!service) {
+  if (!fields.service || !serviceOptions.includes(fields.service as (typeof serviceOptions)[number])) {
     return NextResponse.json({ error: "Please select a service." }, { status: 400 });
   }
 
-  console.info("[quote]", { name, email, phone, service, suburb, message });
+  console.info("[quote]", fields);
 
-  return NextResponse.json({ ok: true });
+  const web3Key = process.env.WEB3FORMS_ACCESS_KEY?.trim();
+  if (web3Key) {
+    const sent = await sendWeb3Forms(web3Key, fields);
+    if (!sent) {
+      console.error("[quote] Web3Forms failed");
+      return NextResponse.json(
+        {
+          error:
+            "The form could not send just now. Please call 0426 703 030 or email admin@westernsydneycleaning.com.au.",
+        },
+        { status: 502 },
+      );
+    }
+    return NextResponse.json({ ok: true, emailVia: "web3forms" });
+  }
+
+  return NextResponse.json({ ok: true, emailVia: "client" });
+}
+
+async function sendWeb3Forms(accessKey: string, fields: QuoteFields): Promise<boolean> {
+  const to = process.env.QUOTE_TO_EMAIL?.trim() || site.email;
+  const subject = `Quote request: ${fields.service}${fields.suburb ? ` — ${fields.suburb}` : ""}`;
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: accessKey,
+        subject,
+        from_name: site.name,
+        to,
+        name: fields.name,
+        email: fields.email,
+        phone: fields.phone,
+        service: fields.service,
+        suburb: fields.suburb || "(not given)",
+        message: fields.message || "(none)",
+      }),
+    });
+    if (!response.ok) return false;
+    const data = (await response.json()) as { success?: boolean };
+    return data.success === true;
+  } catch (error) {
+    console.error("[quote] Web3Forms error", error);
+    return false;
+  }
 }
