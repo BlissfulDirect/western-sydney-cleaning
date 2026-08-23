@@ -38,8 +38,8 @@ export default function AboutPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
           <div>
-            <p className="font-script text-3xl text-[#26a9e0]">Who we are</p>
-            <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#1259a5] md:text-4xl">
+            <p className="font-script text-3xl text-[#1ea36f]">Who we are</p>
+            <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
               A Western Sydney team built for commercial sites
             </h2>
             <p className="mt-5 leading-relaxed text-neutral-700">
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 "After-hours, overnight and weekend programs",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-neutral-700">
-                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[#26a9e0]" />
+                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[#1ea36f]" />
                   {item}
                 </li>
               ))}
@@ -78,9 +78,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#f4fbfd] py-16">
+      <section className="bg-[#f3faf6] py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-[#1259a5]">
+          <h2 className="text-center font-heading text-3xl font-extrabold text-[#0f6b4c]">
             We take pride in customer satisfaction
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-neutral-600">
@@ -91,9 +91,9 @@ export default function AboutPage() {
             {values.map((value) => (
               <article
                 key={value.title}
-                className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#d7eef8]"
+                className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#d5eee3]"
               >
-                <h3 className="font-heading text-xl font-bold text-[#1259a5]">
+                <h3 className="font-heading text-xl font-bold text-[#0f6b4c]">
                   {value.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-neutral-600">
@@ -105,7 +105,7 @@ export default function AboutPage() {
           <div className="mt-10 text-center">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center rounded-full bg-[#1259a5] px-7 font-bold text-white hover:bg-[#0e4a8a]"
+              className="inline-flex h-12 items-center rounded-full bg-[#0f6b4c] px-7 font-bold text-white hover:bg-[#0b543c]"
             >
               Request a free quote
             </Link>

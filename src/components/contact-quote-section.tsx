@@ -9,10 +9,10 @@ export function ContactQuoteSection({
   defaultService?: string;
 }) {
   return (
-    <section className="bg-[#f4fbfd] py-16 md:py-20">
+    <section className="bg-[#f3faf6] py-16 md:py-20">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
         <div className="rounded-3xl bg-white p-6 shadow-[0_20px_50px_rgba(18,89,165,0.08)] sm:p-8">
-          <h2 className="font-heading text-3xl font-extrabold text-[#1259a5]">
+          <h2 className="font-heading text-3xl font-extrabold text-[#0f6b4c]">
             Contact Us For A Quote
           </h2>
           <p className="mt-3 text-neutral-600">
@@ -25,10 +25,10 @@ export function ContactQuoteSection({
           </div>
         </div>
         <div className="flex flex-col justify-center">
-          <p className="font-script text-3xl text-[#26a9e0] sm:text-4xl">
+          <p className="font-script text-3xl text-[#1ea36f] sm:text-4xl">
             Get In Touch
           </p>
-          <h2 className="mt-2 font-heading text-4xl font-extrabold text-[#1259a5]">
+          <h2 className="mt-2 font-heading text-4xl font-extrabold text-[#0f6b4c]">
             {site.shortName}
           </h2>
           <p className="mt-4 max-w-md text-neutral-600">
@@ -41,13 +41,13 @@ export function ContactQuoteSection({
           </p>
           <a
             href={site.phoneHref}
-            className="mt-8 inline-flex w-fit items-center rounded-full bg-[#1259a5] px-6 py-3 text-lg font-bold text-white hover:bg-[#0e4a8a]"
+            className="mt-8 inline-flex w-fit items-center rounded-full bg-[#0f6b4c] px-6 py-3 text-lg font-bold text-white hover:bg-[#0b543c]"
           >
             {site.phone}
           </a>
           <Link
             href="/contact"
-            className="mt-4 text-sm font-semibold text-[#1259a5] underline-offset-4 hover:underline"
+            className="mt-4 text-sm font-semibold text-[#0f6b4c] underline-offset-4 hover:underline"
           >
             Full contact details and operating hours
           </Link>

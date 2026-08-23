@@ -10,7 +10,7 @@ export function PageHero({
   image?: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-[#0b3d73] py-20 text-white md:py-28">
+    <section className="relative isolate overflow-hidden bg-[#0c3d2e] py-20 text-white md:py-28">
       <Image
         src={image}
         alt=""
@@ -19,7 +19,7 @@ export function PageHero({
         className="object-cover opacity-35"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0b3d73] via-[#0b3d73]/80 to-[#1259a5]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0c3d2e] via-[#0c3d2e]/80 to-[#0f6b4c]/40" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <h1 className="max-w-3xl font-heading text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
           {title}

@@ -40,7 +40,7 @@ export default async function LocationPage({ params }: Props) {
       />
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-heading text-3xl font-extrabold text-[#1259a5]">
+          <h2 className="font-heading text-3xl font-extrabold text-[#0f6b4c]">
             {location.name} Cleaning Service
           </h2>
           <p className="mt-5 leading-relaxed text-neutral-700">
@@ -57,7 +57,7 @@ export default async function LocationPage({ params }: Props) {
             preschool, strata or gym — call us today. Our team can answer
             questions or put together a proposal complete with a quote.
           </p>
-          <h3 className="mt-10 font-heading text-2xl font-bold text-[#1259a5]">
+          <h3 className="mt-10 font-heading text-2xl font-bold text-[#0f6b4c]">
             {site.name}: your cleaning partner in {location.name}
           </h3>
           <p className="mt-4 leading-relaxed text-neutral-700">
@@ -71,7 +71,7 @@ export default async function LocationPage({ params }: Props) {
               <li key={service.slug}>
                 <a
                   href={`/services/${service.slug}`}
-                  className="font-semibold text-[#1259a5] hover:underline"
+                  className="font-semibold text-[#0f6b4c] hover:underline"
                 >
                   {service.shortTitle}
                 </a>

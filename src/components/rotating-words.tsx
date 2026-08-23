@@ -15,7 +15,7 @@ export function RotatingWords() {
   }, []);
 
   return (
-    <span className="relative inline-grid font-heading text-4xl font-extrabold tracking-tight text-[#1259a5] sm:text-5xl md:text-6xl">
+    <span className="relative inline-grid font-heading text-4xl font-extrabold tracking-tight text-[#0f6b4c] sm:text-5xl md:text-6xl">
       {words.map((word, wordIndex) => (
         <span
           key={word}

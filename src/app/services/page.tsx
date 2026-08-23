@@ -21,7 +21,7 @@ export default function ServicesPage() {
       />
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-[#1259a5] md:text-4xl">
+          <h2 className="text-center font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
             Our Cleaning Services
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-neutral-600">
@@ -34,18 +34,18 @@ export default function ServicesPage() {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group overflow-hidden rounded-3xl border border-[#d7eef8] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="group overflow-hidden rounded-3xl border border-[#d5eee3] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div
                   className="relative aspect-[16/8] bg-cover bg-center"
                   style={{ backgroundImage: `url(${service.image})` }}
                 />
                 <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-[#1259a5] group-hover:underline">
+                  <h3 className="font-heading text-xl font-bold text-[#0f6b4c] group-hover:underline">
                     {service.shortTitle}
                   </h3>
                   <p className="mt-3 text-neutral-600">{service.excerpt}</p>
-                  <p className="mt-4 text-sm font-bold text-[#26a9e0]">
+                  <p className="mt-4 text-sm font-bold text-[#1ea36f]">
                     View this service →
                   </p>
                 </div>

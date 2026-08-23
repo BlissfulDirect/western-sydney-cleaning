@@ -2,7 +2,7 @@
 
 Commercial cleaning website for **Western Sydney Cleaning** (`westernsydneycleaning.com.au`).
 
-Call **0426 703 030** or email **hello@westernsydneycleaning.com.au**.
+Call **0426 703 030** or email **admin@westernsydneycleaning.com.au**.
 
 ## Run locally
 
@@ -67,7 +67,7 @@ DNS can take up to 24 hours. HTTPS (the padlock) is turned on automatically.
 In `src/lib/site.ts` confirm:
 
 - Phone: **0426 703 030** (already set)
-- Email (change if you use a different inbox)
+- Email: **admin@westernsydneycleaning.com.au** (already set)
 - ABN, once you have one
 - Operating hours
 

@@ -68,7 +68,7 @@ export function QuoteForm({
             ? "border-white/20 bg-white/10 text-white"
             : dark
               ? "border-white/15 bg-white/10 text-white"
-              : "border-[#cdebf8] bg-[#f4fbfd] text-[#1259a5]",
+              : "border-[#c5ead8] bg-[#f3faf6] text-[#0f6b4c]",
         )}
       >
         <p className="font-heading text-xl font-bold">Quote request received</p>
@@ -158,8 +158,8 @@ export function QuoteForm({
         className={cn(
           "mt-1 h-12 rounded-full px-6 text-sm font-bold tracking-wide uppercase",
           variant === "offer"
-            ? "bg-white text-[#1259a5] hover:bg-[#ecf9ff]"
-            : "bg-[#1259a5] text-white hover:bg-[#0e4a8a]",
+            ? "bg-white text-[#0f6b4c] hover:bg-[#ecfaf3]"
+            : "bg-[#0f6b4c] text-white hover:bg-[#0b543c]",
         )}
       >
         {status === "submitting" ? "Sending..." : "Contact us"}

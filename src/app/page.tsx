@@ -45,7 +45,7 @@ const steps = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-[#eef8fd]">
+      <section className="relative isolate overflow-hidden bg-[#e8f6ef]">
         <Image
           src="/images/hero-office.jpg"
           alt="Commercial office interior ready for professional cleaning"
@@ -54,7 +54,7 @@ export default function HomePage() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#eef8fd] via-[#eef8fd]/92 to-[#eef8fd]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#e8f6ef] via-[#e8f6ef]/92 to-[#e8f6ef]/35" />
         <div className="relative mx-auto grid min-h-[640px] max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:min-h-[720px] lg:grid-cols-[1.15fr_0.85fr]">
           <div>
             <RotatingWords />
@@ -71,13 +71,13 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex h-12 items-center rounded-full bg-[#1259a5] px-7 text-sm font-bold tracking-wide text-white uppercase shadow-lg shadow-[#1259a5]/25 hover:bg-[#0e4a8a]"
+                className="inline-flex h-12 items-center rounded-full bg-[#0f6b4c] px-7 text-sm font-bold tracking-wide text-white uppercase shadow-lg shadow-[#0f6b4c]/25 hover:bg-[#0b543c]"
               >
                 Enquire Now
               </Link>
               <a
                 href={site.phoneHref}
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-[#1259a5]/20 bg-white/80 px-5 text-sm font-bold text-[#1259a5] hover:bg-white"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-[#0f6b4c]/20 bg-white/80 px-5 text-sm font-bold text-[#0f6b4c] hover:bg-white"
               >
                 <Phone className="size-4" />
                 {site.phone}
@@ -91,7 +91,7 @@ export default function HomePage() {
                   <Star key={i} className="size-5 fill-current" />
                 ))}
               </div>
-              <p className="mt-3 font-heading text-lg font-bold text-[#1259a5]">
+              <p className="mt-3 font-heading text-lg font-bold text-[#0f6b4c]">
                 Ready for a free quote
               </p>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
@@ -103,7 +103,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative z-10 -mt-8 bg-[#1f8dcd] text-white">
+      <section className="relative z-10 -mt-8 bg-[#168a62] text-white">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
           {stats.map((item) => (
             <div key={item.label} className="flex items-center gap-3">
@@ -118,10 +118,10 @@ export default function HomePage() {
 
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-center text-sm font-bold tracking-[0.18em] text-[#26a9e0] uppercase">
+          <p className="text-center text-sm font-bold tracking-[0.18em] text-[#1ea36f] uppercase">
             What we do
           </p>
-          <h2 className="mt-2 text-center font-heading text-3xl font-extrabold text-[#1259a5] md:text-4xl">
+          <h2 className="mt-2 text-center font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
             Our Cleaning Services
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-neutral-600">
@@ -134,7 +134,7 @@ export default function HomePage() {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group overflow-hidden rounded-3xl border border-[#d7eef8] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="group overflow-hidden rounded-3xl border border-[#d5eee3] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="relative aspect-[16/10]">
                   <Image
@@ -146,7 +146,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-heading text-lg font-bold text-[#1259a5] underline-offset-4 group-hover:underline">
+                  <h3 className="font-heading text-lg font-bold text-[#0f6b4c] underline-offset-4 group-hover:underline">
                     {service.shortTitle}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-neutral-600">
@@ -159,7 +159,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-[#f4fbfd] py-16 md:py-20">
+      <section className="overflow-hidden bg-[#f3faf6] py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
           <div className="relative">
             <Image
@@ -171,10 +171,10 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <p className="font-script text-3xl text-[#26a9e0] sm:text-4xl">
+            <p className="font-script text-3xl text-[#1ea36f] sm:text-4xl">
               Taking Care of Western Sydney
             </p>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold text-[#1259a5] md:text-4xl">
+            <h2 className="mt-3 font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
               Commercial cleaning built around how your site actually runs
             </h2>
             <p className="mt-5 leading-relaxed text-neutral-700">
@@ -189,7 +189,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/about"
-              className="mt-7 inline-flex h-11 items-center rounded-full bg-[#1259a5] px-6 text-sm font-bold text-white hover:bg-[#0e4a8a]"
+              className="mt-7 inline-flex h-11 items-center rounded-full bg-[#0f6b4c] px-6 text-sm font-bold text-white hover:bg-[#0b543c]"
             >
               About our team
             </Link>
@@ -199,7 +199,7 @@ export default function HomePage() {
 
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-[#1259a5] md:text-4xl">
+          <h2 className="text-center font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
             3-Step Booking
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-neutral-600">
@@ -210,12 +210,12 @@ export default function HomePage() {
             {steps.map((step) => (
               <article
                 key={step.n}
-                className="rounded-3xl border border-[#d7eef8] bg-[#f8fcfe] p-6"
+                className="rounded-3xl border border-[#d5eee3] bg-[#f6fbf8] p-6"
               >
-                <p className="font-heading text-4xl font-extrabold text-[#26a9e0]">
+                <p className="font-heading text-4xl font-extrabold text-[#1ea36f]">
                   {step.n}
                 </p>
-                <h3 className="mt-3 font-heading text-xl font-bold text-[#1259a5]">
+                <h3 className="mt-3 font-heading text-xl font-bold text-[#0f6b4c]">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-neutral-600">
@@ -227,10 +227,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#1259a5] py-16 text-white">
+      <section className="relative overflow-hidden bg-[#0f6b4c] py-16 text-white">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 px-4 sm:px-6 lg:flex-row lg:items-center">
           <div>
-            <p className="font-script text-3xl text-[#7fd3f5]">Let&apos;s Get Started</p>
+            <p className="font-script text-3xl text-[#8ee0b8]">Let&apos;s Get Started</p>
             <h2 className="mt-2 font-heading text-3xl font-extrabold md:text-4xl">
               Ready for a cleaner, healthier workplace?
             </h2>
@@ -242,7 +242,7 @@ export default function HomePage() {
           </div>
           <a
             href={site.phoneHref}
-            className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-xl font-extrabold text-[#1259a5] shadow-lg"
+            className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-xl font-extrabold text-[#0f6b4c] shadow-lg"
           >
             <Phone className="size-6" />
             {site.phone}
@@ -252,9 +252,9 @@ export default function HomePage() {
 
       <Testimonials />
 
-      <section className="bg-[#f4fbfd] py-16 md:py-20">
+      <section className="bg-[#f3faf6] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-[#1259a5] md:text-4xl">
+          <h2 className="text-center font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
             Our Service Areas
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-neutral-600">
@@ -266,14 +266,14 @@ export default function HomePage() {
               <Link
                 key={location.slug}
                 href={`/locations/${location.slug}`}
-                className="rounded-2xl bg-white px-5 py-4 font-heading font-bold text-[#1259a5] shadow-sm ring-1 ring-[#d7eef8] transition hover:-translate-y-0.5 hover:shadow-md"
+                className="rounded-2xl bg-white px-5 py-4 font-heading font-bold text-[#0f6b4c] shadow-sm ring-1 ring-[#d5eee3] transition hover:-translate-y-0.5 hover:shadow-md"
               >
                 {location.name}
               </Link>
             ))}
             <Link
               href="/locations"
-              className="rounded-2xl bg-[#1259a5] px-5 py-4 text-center font-heading font-bold text-white shadow-sm hover:bg-[#0e4a8a]"
+              className="rounded-2xl bg-[#0f6b4c] px-5 py-4 text-center font-heading font-bold text-white shadow-sm hover:bg-[#0b543c]"
             >
               And more…
             </Link>
@@ -281,7 +281,7 @@ export default function HomePage() {
           <p className="mt-8 text-center">
             <Link
               href="/locations"
-              className="font-semibold text-[#1259a5] underline-offset-4 hover:underline"
+              className="font-semibold text-[#0f6b4c] underline-offset-4 hover:underline"
             >
               View all service areas
             </Link>

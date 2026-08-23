@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#0b3d73] text-white">
+    <footer className="bg-[#0c3d2e] text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="rounded-2xl bg-white px-3 py-3">

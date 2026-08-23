@@ -17,7 +17,7 @@ export function Logo({
         className,
       )}
     >
-      <span className="relative flex size-11 shrink-0 items-center justify-center rounded-full bg-[#1259a5] text-white shadow-[0_8px_20px_rgba(18,89,165,0.28)]">
+      <span className="relative flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0f6b4c] text-white shadow-[0_8px_20px_rgba(15,107,76,0.28)]">
         <svg
           viewBox="0 0 32 32"
           className="size-6"
@@ -32,26 +32,26 @@ export function Logo({
           />
           <path
             d="M10 22.8c2.4.8 4.2 2.6 5.1 5"
-            stroke="#7fd3f5"
+            stroke="#8ee0b8"
             strokeWidth="1.8"
             strokeLinecap="round"
           />
-          <circle cx="22.5" cy="9" r="1.4" fill="#7fd3f5" />
+          <circle cx="22.5" cy="9" r="1.4" fill="#8ee0b8" />
           <path
             d="M22.5 5.8v1.4M22.5 11v1.4M19.7 9h1.4M24 9h1.4M20.5 7.1l1 1M23.5 9.9l1 1M20.5 10.9l1-1M23.5 8.1l1-1"
-            stroke="#7fd3f5"
+            stroke="#8ee0b8"
             strokeWidth="1.2"
             strokeLinecap="round"
           />
         </svg>
       </span>
       <span className="leading-none">
-        <span className="block font-heading text-[15px] font-extrabold tracking-tight text-[#1259a5] uppercase sm:text-base">
+        <span className="block font-heading text-[15px] font-extrabold tracking-tight text-[#0f6b4c] uppercase sm:text-base">
           Western Sydney
         </span>
         <span
           className={cn(
-            "block font-heading text-[13px] font-bold tracking-[0.18em] text-[#26a9e0] uppercase",
+            "block font-heading text-[13px] font-bold tracking-[0.18em] text-[#1ea36f] uppercase",
             compact && "text-[11px] tracking-[0.16em]",
           )}
         >

@@ -41,20 +41,20 @@ export function SiteHeader() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "flex items-center gap-1 rounded-full px-3 py-2 text-[15px] font-semibold text-neutral-700 transition-colors hover:text-[#1259a5]",
-                    pathname.startsWith("/services") && "text-[#1259a5]",
+                    "flex items-center gap-1 rounded-full px-3 py-2 text-[15px] font-semibold text-neutral-700 transition-colors hover:text-[#0f6b4c]",
+                    pathname.startsWith("/services") && "text-[#0f6b4c]",
                   )}
                 >
                   {link.label}
                   <ChevronDown className="size-4 opacity-70" />
                 </Link>
                 <div className="invisible absolute left-0 top-full z-20 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100">
-                  <div className="min-w-72 rounded-2xl border border-[#d7eef8] bg-white p-2 shadow-xl">
+                  <div className="min-w-72 rounded-2xl border border-[#d5eee3] bg-white p-2 shadow-xl">
                     {services.map((service) => (
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="block rounded-xl px-3 py-2.5 text-sm font-medium text-neutral-700 hover:bg-[#f4fbfd] hover:text-[#1259a5]"
+                        className="block rounded-xl px-3 py-2.5 text-sm font-medium text-neutral-700 hover:bg-[#f3faf6] hover:text-[#0f6b4c]"
                       >
                         {service.navLabel}
                       </Link>
@@ -67,8 +67,8 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-full px-3 py-2 text-[15px] font-semibold text-neutral-700 transition-colors hover:text-[#1259a5]",
-                  pathname === link.href && "text-[#1259a5]",
+                  "rounded-full px-3 py-2 text-[15px] font-semibold text-neutral-700 transition-colors hover:text-[#0f6b4c]",
+                  pathname === link.href && "text-[#0f6b4c]",
                 )}
               >
                 {link.label}
@@ -80,7 +80,7 @@ export function SiteHeader() {
           <Button
             nativeButton={false}
             render={<a href={site.phoneHref} />}
-            className="hidden h-11 rounded-full bg-[#1259a5] px-4 text-sm font-bold text-white hover:bg-[#0e4a8a] sm:inline-flex"
+            className="hidden h-11 rounded-full bg-[#0f6b4c] px-4 text-sm font-bold text-white hover:bg-[#0b543c] sm:inline-flex"
           >
             <Phone className="size-4" />
             Call: {site.phone}
@@ -128,7 +128,7 @@ export function SiteHeader() {
                 </div>
                 <a
                   href={site.phoneHref}
-                  className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-[#1259a5] font-bold text-white"
+                  className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-[#0f6b4c] font-bold text-white"
                 >
                   Call {site.phone}
                 </a>

@@ -22,7 +22,7 @@ export default function LocationsPage() {
       />
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-[#1259a5] md:text-4xl">
+          <h2 className="text-center font-heading text-3xl font-extrabold text-[#0f6b4c] md:text-4xl">
             Our Service Areas
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-neutral-600">
@@ -35,9 +35,9 @@ export default function LocationsPage() {
               <Link
                 key={location.slug}
                 href={`/locations/${location.slug}`}
-                className="rounded-2xl border border-[#d7eef8] bg-[#f8fcfe] px-5 py-5 transition hover:-translate-y-0.5 hover:border-[#1259a5] hover:shadow-md"
+                className="rounded-2xl border border-[#d5eee3] bg-[#f6fbf8] px-5 py-5 transition hover:-translate-y-0.5 hover:border-[#0f6b4c] hover:shadow-md"
               >
-                <h3 className="font-heading text-lg font-bold text-[#1259a5]">
+                <h3 className="font-heading text-lg font-bold text-[#0f6b4c]">
                   {location.name} Cleaning Services
                 </h3>
                 <p className="mt-1 text-xs font-semibold tracking-wide text-neutral-400 uppercase">

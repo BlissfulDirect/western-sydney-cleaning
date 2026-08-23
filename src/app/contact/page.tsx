@@ -22,8 +22,8 @@ export default function ContactPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="font-script text-3xl text-[#26a9e0]">Get In Touch</p>
-            <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#1259a5]">
+            <p className="font-script text-3xl text-[#1ea36f]">Get In Touch</p>
+            <h2 className="mt-2 font-heading text-3xl font-extrabold text-[#0f6b4c]">
               {site.shortName}
             </h2>
             <p className="mt-4 text-neutral-600">
@@ -31,7 +31,7 @@ export default function ContactPage() {
             </p>
             <ul className="mt-8 space-y-5">
               <li className="flex gap-4">
-                <span className="flex size-11 items-center justify-center rounded-full bg-[#e8f6fd] text-[#1259a5]">
+                <span className="flex size-11 items-center justify-center rounded-full bg-[#e3f5ec] text-[#0f6b4c]">
                   <Phone className="size-5" />
                 </span>
                 <div>
@@ -40,14 +40,14 @@ export default function ContactPage() {
                   </p>
                   <a
                     href={site.phoneHref}
-                    className="font-heading text-lg font-bold text-[#1259a5]"
+                    className="font-heading text-lg font-bold text-[#0f6b4c]"
                   >
                     M: {site.phone}
                   </a>
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="flex size-11 items-center justify-center rounded-full bg-[#e8f6fd] text-[#1259a5]">
+                <span className="flex size-11 items-center justify-center rounded-full bg-[#e3f5ec] text-[#0f6b4c]">
                   <Mail className="size-5" />
                 </span>
                 <div>
@@ -56,14 +56,14 @@ export default function ContactPage() {
                   </p>
                   <a
                     href={site.emailHref}
-                    className="font-heading text-lg font-bold text-[#1259a5]"
+                    className="font-heading text-lg font-bold text-[#0f6b4c]"
                   >
                     {site.email}
                   </a>
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="flex size-11 items-center justify-center rounded-full bg-[#e8f6fd] text-[#1259a5]">
+                <span className="flex size-11 items-center justify-center rounded-full bg-[#e3f5ec] text-[#0f6b4c]">
                   <Clock className="size-5" />
                 </span>
                 <div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="flex size-11 items-center justify-center rounded-full bg-[#e8f6fd] text-[#1259a5]">
+                <span className="flex size-11 items-center justify-center rounded-full bg-[#e3f5ec] text-[#0f6b4c]">
                   <MapPin className="size-5" />
                 </span>
                 <div>
@@ -94,8 +94,8 @@ export default function ContactPage() {
               </li>
             </ul>
           </div>
-          <div className="rounded-3xl border border-[#d7eef8] bg-[#f8fcfe] p-6 sm:p-8">
-            <h2 className="font-heading text-2xl font-extrabold text-[#1259a5]">
+          <div className="rounded-3xl border border-[#d5eee3] bg-[#f6fbf8] p-6 sm:p-8">
+            <h2 className="font-heading text-2xl font-extrabold text-[#0f6b4c]">
               Send us a message
             </h2>
             <p className="mt-2 text-sm text-neutral-600">
